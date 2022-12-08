@@ -26,6 +26,7 @@ class Dataset:
         self.__images = []
         self.__transforms = transforms
         self.__quant_classes = quant_classes
+        self.read_data()
 
 
 

@@ -7,6 +7,7 @@ from dataloader.dataloader import DataLoader
 from datasets.dataset import Dataset, DataSetType
 from model.ExampleModel import ExampleModel
 from ops.norm import Normalize, View
+from trainer.trainer import Trainer
 from utils.config import Config
 
 
@@ -28,6 +29,10 @@ def run():
 
     next(dataload.batch_generator())
     dataload.show_batch()
+
+    trainer = Trainer(conf)
+
+    trainer.overfit_on_batch()
 
 if __name__ == '__main__':
     run()

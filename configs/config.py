@@ -13,6 +13,7 @@ CFG = {
         "dataset_type": "train",
         "transforms": [],
         "classes": 10,
+        "path": "MNIST",
         "image_size": 28,
         "load_with_info": True
     },
@@ -25,12 +26,7 @@ CFG = {
         "metrics": ["accuracy", "balanced_accuracy"]
     },
     "model": {
-        "input": [28, 28, 1],
-        "up_stack": {
-            "layer_1": 128,
-            "layer_2": 128,
-        },
-        "acivation_function": "relu",
-        "output": 10
+        "parametrs": [('FullyConnected', {'input_size': 784, 'output_size': 128}), ('ReLU', {}),
+                      ('FullyConnected', {'input_size': 128, 'output_size': 10})]
     }
 }

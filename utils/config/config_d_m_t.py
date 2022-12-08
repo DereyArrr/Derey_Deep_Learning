@@ -56,6 +56,7 @@ class ConfigModel(BaseConfig):
         self.__up_stack = {}
         self.__acivation_function = NULL
         self.__output = NULL
+        self.parameters = []
         super().__init__(section)
 
 
